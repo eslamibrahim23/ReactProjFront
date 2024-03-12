@@ -7,11 +7,12 @@ import NavBar from "../Components/NavBar";
 export default function PostsLayout() {
   return (
     <>
-      <NavBar />
-      <div >
-      <Outlet/>
+      <div className="w-full">
+        <NavBar />
+        <div>
+          <Outlet />
+        </div>
       </div>
-   
     </>
   );
 }

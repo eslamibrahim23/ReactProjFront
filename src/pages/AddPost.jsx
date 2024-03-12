@@ -69,7 +69,7 @@ function AddPost() {
 
   return (
     <>
-      <div className="w-3/4 m-auto p-3 bg-gray-100">
+      <div className="lg:w-3/4 w-3/4 m-auto p-3 bg-gray-100">
         <div className="w-3/4 m-auto">
           <div className="  block">
             <div>
@@ -82,26 +82,26 @@ function AddPost() {
               </h1>
             </div>
 
-            <div className="  border block">
+            <div className=" w-full  border block">
               <textarea
-                className="px-3"
+                className=" w-full px-3"
                 placeholder="title"
                 id="textArea"
                 name="title"
                 rows="1"
-                cols="100"
+                // cols="lg:100 "
                 value={data.title}
                 onChange={onChaneHandler}
               ></textarea>
             </div>
-            <div className="  border block">
+            <div className=" w-full border block">
               <textarea
-                className="px-3"
+                className="w-full px-3"
                 placeholder="What`s on your mind..."
                 id="textArea"
                 name="body"
                 rows="10"
-                cols="100"
+                // cols="100"
                 value={data.body}
                 onChange={onChaneHandler}
               ></textarea>
@@ -110,6 +110,7 @@ function AddPost() {
 
           <div>
             <input
+              className="w-full"
               type="file"
               onChange={(event) => {
                 setImageUpload(event.target.files[0]);

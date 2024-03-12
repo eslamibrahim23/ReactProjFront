@@ -19,52 +19,31 @@ function NavBar() {
           <Link to="/Home" className="text-2xl ">
             Home
           </Link>
-          {/* <Link to="/Register" className="text-2xl ">
+          {!localStorage.getItem("userInfo") && 
+          <>
+         
+          <Link to="/Register" className="text-2xl ">
             Register
           </Link>
           <Link to="/Login" className="text-2xl ">
             Login
-          </Link> */}
+          </Link>
+         
+          </>
+          }
+            {localStorage.getItem("userInfo") && 
           <button className="text-red-400" onClick={LogOut}>
             LogOut
           </button>
+          }
         </div>
 
         <div className="navbar-end"></div>
       </div>
-      {/* <div className="flex h-screen">
-        <div className="bg-gray-100 lg:w-1/5 md:w-4/5  rounded-lg">
-          fsdsadfsfsdfd
-        </div>
-        <div className="bg-base-100 lg:w-4/5 md:w-1/5 rounded-md">
-          <ContainerOfPosts />
-          <AddIcon />
-        </div>
-      </div> */}
+  
     </>
   );
 }
 
 export default NavBar;
 
-// <div>
-// <div>
-//   <div className="flex items-center justify-between px-16 h-20 bg-sky-400">
-//     <div className="cursor-pointer bg-transparent p-1">
-//       <Link to="/Home" className="text-2xl ">  Home</Link>
-//
-//
-//     </div>
-//     <div className="cursor-pointer bg-transparent p-1">
-//       <Link to="/Register" className="text-2xl ">
-//         Register
-//       </Link>
-//     </div>
-//     <div className="cursor-pointer bg-transparent p-1">
-//       <Link to="/Login" className="text-2xl ">
-//         Login
-//       </Link>
-//     </div>
-//   </div>
-// </div>
-// </div>

@@ -1,5 +1,6 @@
 /* eslint-disable react-hooks/rules-of-hooks */
 import axios from "axios";
+import { jwtDecode } from "jwt-decode";
 
 import { useEffect, useState } from "react";
 import { Link, useNavigate } from "react-router-dom";
@@ -39,6 +40,13 @@ function ShowPosts() {
   // };
   console.log(allPosts);
 
+  let authorizationToken = localStorage.getItem("userInfo");
+  console.log(authorizationToken);
+
+  const decoded = jwtDecode(authorizationToken);
+  console.log(decoded);
+
+
   return (
     <>
       {allPosts ? (
@@ -58,7 +66,8 @@ function ShowPosts() {
                       </div>
                     </div>
                   </div>
-                  <div>
+                  {(s.createdBy._id===decoded._id) && 
+                    <div>
                     <div className="dropdown dropdown-end">
                       <div tabIndex={0} role="button" className="btn m-1">
                         <svg
@@ -82,13 +91,16 @@ function ShowPosts() {
                       >
                         <li>
                           <a onClick={() => deletePost(s._id)}>
+                            <span className="text-red-600 font-bold">
+                              Delete Post
+                            </span>
                             <svg
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
                               viewBox="0 0 24 24"
                               strokeWidth={1.5}
                               stroke="currentColor"
-                              className="w-6 h-6"
+                              className="w-6 h-6 text-red-600"
                             >
                               <path
                                 strokeLinecap="round"
@@ -99,14 +111,17 @@ function ShowPosts() {
                           </a>
                         </li>
                         <li>
-                          <Link to={`/EditPost/${s._id}`} >
+                          <Link to={`/EditPost/${s._id}`}>
+                            <span className="text-blue-600 font-bold">
+                              Edit Post
+                            </span>
                             <svg
+                              className=" w-6 h-6 text-blue-600 font-bold"
                               xmlns="http://www.w3.org/2000/svg"
                               fill="none"
                               viewBox="0 0 24 24"
                               strokeWidth={1.5}
                               stroke="currentColor"
-                              className="w-6 h-6"
                             >
                               <path
                                 strokeLinecap="round"
@@ -119,6 +134,8 @@ function ShowPosts() {
                       </ul>
                     </div>
                   </div>
+                   }
+                
                 </div>
               </div>
               <div className="px-5 pt-5 text-3xl">

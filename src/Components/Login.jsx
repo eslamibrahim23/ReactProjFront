@@ -41,7 +41,9 @@ function Login() {
 
   return (
     <>
-      login
+     <h1 className="text-3xl text-blue-400 p-5 w-full m-auto text-center">
+        Login
+      </h1>
       <div className="flex m-auto w-100 justify-center items-center my-10">
         <div className="mx-10">
           <img src="src/assets/images/R.jpg" width={600} alt="" />

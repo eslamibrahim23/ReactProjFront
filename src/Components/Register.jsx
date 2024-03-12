@@ -26,10 +26,11 @@ export default function Register() {
   const [data, setData] = useState({});
   const navigate = useNavigate();
   const onSubmit = async (d) => {
-    const userImage="https://xsgames.co/randomusers/assets/avatars/male/5.jpg"
+    const userImage =
+      "https://xsgames.co/randomusers/assets/avatars/male/5.jpg";
     const user = await axios.post(
       "https://backreact-4r53.onrender.com/users/signup",
-      { ...d,userImage },
+      { ...d, userImage },
       {
         headers: {
           "Content-Type": "application/json",
@@ -38,15 +39,17 @@ export default function Register() {
     );
     if (user.data.status === "success") {
       console.log("yes");
-      navigate('/Login')
+      navigate("/Login");
     }
   };
-
 
   const [loading, setLoading] = useState(false);
 
   return (
     <>
+      <h1 className="text-3xl text-blue-400 p-5 w-full m-auto text-center">
+        Registeration
+      </h1>
       <div className="flex m-auto w-100 justify-center items-center my-10">
         <div className="mx-10">
           <img
