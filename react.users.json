@@ -1,0 +1,48 @@
+[{
+  "_id": {
+    "$oid": "65eb9e89b0c2deb7614af46a"
+  },
+  "firstname": "fsdfsdfsdfs",
+  "lastname": "fsdfsdfsdfs",
+  "email": "esadasd@dsdas.com",
+  "password": "$2b$10$cIjH0N0DsUcVn8kOZTsUJ.6dPUyPIrZJV4yG937RBwrarlKnD3o1u",
+  "createdAt": {
+    "$date": "2024-03-08T23:26:01.473Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-08T23:26:01.473Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ec3beace724182ec890b69"
+  },
+  "firstname": "fsdfsdfsdfs",
+  "lastname": "fsdfsdfsdfs",
+  "email": "esadasd@dsdads.com",
+  "password": "$2b$10$s2v/N.VMt18Sh.MDp/gnWOanQR4eAM6w.uGBZbUxjg1De2IIn76Wm",
+  "createdAt": {
+    "$date": "2024-03-09T10:37:30.770Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-09T10:37:30.770Z"
+  },
+  "__v": 0
+},
+{
+  "_id": {
+    "$oid": "65ec3beece724182ec890b6c"
+  },
+  "firstname": "fsdfsdfsdfs",
+  "lastname": "fsdfsdfsdfs",
+  "email": "esadadsd@dsdads.com",
+  "password": "$2b$10$CL/RID3nfa8IQdjlI/45kuwDlZh8.Ptgj1cIlgDJBmcmcS/o0hSha",
+  "createdAt": {
+    "$date": "2024-03-09T10:37:34.815Z"
+  },
+  "updatedAt": {
+    "$date": "2024-03-09T10:37:34.815Z"
+  },
+  "__v": 0
+}]
