@@ -45,9 +45,9 @@ function Login() {
         Login
       </h1>
       <div className="flex m-auto w-100 justify-center items-center my-10">
-        <div className="mx-10">
+        {/* <div className="mx-10">
           <img src="src/assets/images/R.jpg" width={600} alt="" />
-        </div>
+        </div> */}
         <form className="w-50" onSubmit={handleSubmit(onSubmit)}>
           <div className="flex flex-col w-96 m-auto  ">
             <label className="mt-2">Email:</label>
