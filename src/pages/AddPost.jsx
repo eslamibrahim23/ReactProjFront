@@ -12,12 +12,14 @@ function AddPost() {
   const [imageUpload, setImageUpload] = useState(null);
   const [uploadedimage, setuploadedimage] = useState();
 
+  console.log(uploadedimage);
   const uploadImage = (event) => {
     if (imageUpload == null) return;
     const imageref = ref(storage, `images/${imageUpload.name + v4()}`);
     //v4 an libarary genreate uniqe ids
     uploadBytes(imageref, imageUpload).then((d) => {
       getDownloadURL(d.ref).then((url) => {
+        console.log(url);
         postreq(url);
       });
     });
